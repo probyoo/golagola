@@ -1,19 +1,22 @@
-subprojects {
+allprojects {
     apply plugin: 'java'
-    apply plugin: 'eclipse'
-	apply plugin: 'war'
-
-    repositories {
-       mavenCentral()
-    }
-
-    dependencies {
-        testCompile 'junit:junit:4.8.2'
-    }
-
+    group = 'hello'
     version = '1.0'
+}
 
-    jar {
-       // manifest.attributes provider: 'my cool company'
+subprojects {
+    apply plugin: 'war'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        compile("org.springframework.boot:spring-boot-starter-web:1.3.6.RELEASE")
+    }
+}
+
+task explodedDist(type: Copy) {
+    into "$buildDir/explodedDist"
+    subprojects {
+        from tasks.withType(War)
     }
 }
