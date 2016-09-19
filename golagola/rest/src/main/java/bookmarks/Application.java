@@ -8,6 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -25,29 +28,19 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 @Configuration
 @ComponentScan
 @EnableAutoConfiguration
-public class Application {
+@SpringBootApplication
+public class Application extends SpringBootServletInitializer {
 
-	@Bean
-	CommandLineRunner init(AccountRepository accountRepository,
-			BookmarkRepository bookmarkRepository) {
-		return (evt) -> Arrays.asList(
-				"jhoeller,dsyer,pwebb,ogierke,rwinch,mfisher,mpollack,jlong".split(","))
-				.forEach(
-						a -> {
-							Account account = accountRepository.save(new Account(a,
-									"password"));
-							bookmarkRepository.save(new Bookmark(account,
-									"http://bookmark.com/1/" + a, "A description"));
-							bookmarkRepository.save(new Bookmark(account,
-									"http://bookmark.com/2/" + a, "A description"));
-						});
-	}
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(Application.class);
+    }
 
-	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
-	}
+    public static void main(String[] args) throws Exception {
+        SpringApplication.run(Application.class, args);
+    }
+
 }
-// end::runner[]
 
 @RestController
 @RequestMapping("/{userId}/bookmarks")
@@ -60,18 +53,14 @@ class BookmarkRestController {
 	@RequestMapping(method = RequestMethod.POST)
 	ResponseEntity<?> add(@PathVariable String userId, @RequestBody Bookmark input) {
 		this.validateUser(userId);
-		return this.accountRepository
-				.findByUsername(userId)
-				.map(account -> {
-					Bookmark result = bookmarkRepository.save(new Bookmark(account,
-							input.uri, input.description));
+		return this.accountRepository.findByUsername(userId).map(account -> {
+			Bookmark result = bookmarkRepository.save(new Bookmark(account, input.uri, input.description));
 
-					HttpHeaders httpHeaders = new HttpHeaders();
-					httpHeaders.setLocation(ServletUriComponentsBuilder
-							.fromCurrentRequest().path("/{id}")
-							.buildAndExpand(result.getId()).toUri());
-					return new ResponseEntity<>(null, httpHeaders, HttpStatus.CREATED);
-				}).get();
+			HttpHeaders httpHeaders = new HttpHeaders();
+			httpHeaders.setLocation(ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
+					.buildAndExpand(result.getId()).toUri());
+			return new ResponseEntity<>(null, httpHeaders, HttpStatus.CREATED);
+		}).get();
 
 	}
 
@@ -83,20 +72,19 @@ class BookmarkRestController {
 
 	@RequestMapping(method = RequestMethod.GET)
 	Collection<Bookmark> readBookmarks(@PathVariable String userId) {
+		System.out.println(userId);
 		this.validateUser(userId);
 		return this.bookmarkRepository.findByAccountUsername(userId);
 	}
 
 	@Autowired
-	BookmarkRestController(BookmarkRepository bookmarkRepository,
-			AccountRepository accountRepository) {
+	BookmarkRestController(BookmarkRepository bookmarkRepository, AccountRepository accountRepository) {
 		this.bookmarkRepository = bookmarkRepository;
 		this.accountRepository = accountRepository;
 	}
 
 	private void validateUser(String userId) {
-		this.accountRepository.findByUsername(userId).orElseThrow(
-				() -> new UserNotFoundException(userId));
+		this.accountRepository.findByUsername(userId).orElseThrow(() -> new UserNotFoundException(userId));
 	}
 }
 

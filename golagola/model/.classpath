@@ -15,6 +15,11 @@
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
+	<classpathentry path="/Users/yoojeamoon/work/local/gradle-3.0/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-tomcat/1.4.0.RELEASE/9f3530cbc1998b9aeebd0a5c070f5d4f24357610/spring-boot-starter-tomcat-1.4.0.RELEASE.jar" kind="lib" sourcepath="/Users/yoojeamoon/work/local/gradle-3.0/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-tomcat/1.4.0.RELEASE/dbdef4e075c33c594054de58460d15a711744bfc/spring-boot-starter-tomcat-1.4.0.RELEASE-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
 	<classpathentry path="/Users/yoojeamoon/work/local/gradle-3.0/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-test/1.4.0.RELEASE/8960b7357acd9819bc357fe96a9768a9fb010ccf/spring-boot-starter-test-1.4.0.RELEASE.jar" kind="lib" sourcepath="/Users/yoojeamoon/work/local/gradle-3.0/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-test/1.4.0.RELEASE/4123e536b861b1242258f3462e68dad126bb0b70/spring-boot-starter-test-1.4.0.RELEASE-sources.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
@@ -56,6 +61,21 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry path="/Users/yoojeamoon/work/local/gradle-3.0/caches/modules-2/files-2.1/org.springframework.data/spring-data-mongodb/1.9.2.RELEASE/419344f722000ba0517629e910babfea8bd4b592/spring-data-mongodb-1.9.2.RELEASE.jar" kind="lib" sourcepath="/Users/yoojeamoon/work/local/gradle-3.0/caches/modules-2/files-2.1/org.springframework.data/spring-data-mongodb/1.9.2.RELEASE/5d612fa830d98752e546727ec241d610d8a0f909/spring-data-mongodb-1.9.2.RELEASE-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="/Users/yoojeamoon/work/local/gradle-3.0/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-core/8.5.4/48ee085e4b3f71e98535e4c17c0ce1394812a94a/tomcat-embed-core-8.5.4.jar" kind="lib" sourcepath="/Users/yoojeamoon/work/local/gradle-3.0/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-core/8.5.4/8dda3764a45c6fe593fa62fbfbacb586d00355e/tomcat-embed-core-8.5.4-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="/Users/yoojeamoon/work/local/gradle-3.0/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-el/8.5.4/2d53f2e3b6b456cb7ac82e1549a944db7f5b05bf/tomcat-embed-el-8.5.4.jar" kind="lib" sourcepath="/Users/yoojeamoon/work/local/gradle-3.0/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-el/8.5.4/ffd6340a37427eb1dcb7abdd8719dcf09cfc389b/tomcat-embed-el-8.5.4-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="/Users/yoojeamoon/work/local/gradle-3.0/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-websocket/8.5.4/211d26f536aee3283345aa5b1c479e937401fcd2/tomcat-embed-websocket-8.5.4.jar" kind="lib" sourcepath="/Users/yoojeamoon/work/local/gradle-3.0/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-websocket/8.5.4/b2d4dd915b9560876c5064f2f9a8d25a774ad9e1/tomcat-embed-websocket-8.5.4-sources.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
@@ -126,11 +146,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry path="/Users/yoojeamoon/work/local/gradle-3.0/caches/modules-2/files-2.1/org.yaml/snakeyaml/1.17/7a27ea250c5130b2922b86dea63cbb1cc10a660c/snakeyaml-1.17.jar" kind="lib" sourcepath="/Users/yoojeamoon/work/local/gradle-3.0/caches/modules-2/files-2.1/org.yaml/snakeyaml/1.17/63577e87886c76228db9f8a2c50ea43cde5072eb/snakeyaml-1.17-sources.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
-		</attributes>
-	</classpathentry>
-	<classpathentry path="/Users/yoojeamoon/work/local/gradle-3.0/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-tomcat/1.4.0.RELEASE/9f3530cbc1998b9aeebd0a5c070f5d4f24357610/spring-boot-starter-tomcat-1.4.0.RELEASE.jar" kind="lib" sourcepath="/Users/yoojeamoon/work/local/gradle-3.0/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-tomcat/1.4.0.RELEASE/dbdef4e075c33c594054de58460d15a711744bfc/spring-boot-starter-tomcat-1.4.0.RELEASE-sources.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
@@ -231,21 +246,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry path="/Users/yoojeamoon/work/local/gradle-3.0/caches/modules-2/files-2.1/org.slf4j/log4j-over-slf4j/1.7.21/b3700d97464d99bdcd42c0177d6e7951c94d75ff/log4j-over-slf4j-1.7.21.jar" kind="lib" sourcepath="/Users/yoojeamoon/work/local/gradle-3.0/caches/modules-2/files-2.1/org.slf4j/log4j-over-slf4j/1.7.21/7d7494c4241d0dee8bf0680187282d3dc19844e/log4j-over-slf4j-1.7.21-sources.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
-		</attributes>
-	</classpathentry>
-	<classpathentry path="/Users/yoojeamoon/work/local/gradle-3.0/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-core/8.5.4/48ee085e4b3f71e98535e4c17c0ce1394812a94a/tomcat-embed-core-8.5.4.jar" kind="lib" sourcepath="/Users/yoojeamoon/work/local/gradle-3.0/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-core/8.5.4/8dda3764a45c6fe593fa62fbfbacb586d00355e/tomcat-embed-core-8.5.4-sources.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
-		</attributes>
-	</classpathentry>
-	<classpathentry path="/Users/yoojeamoon/work/local/gradle-3.0/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-el/8.5.4/2d53f2e3b6b456cb7ac82e1549a944db7f5b05bf/tomcat-embed-el-8.5.4.jar" kind="lib" sourcepath="/Users/yoojeamoon/work/local/gradle-3.0/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-el/8.5.4/ffd6340a37427eb1dcb7abdd8719dcf09cfc389b/tomcat-embed-el-8.5.4-sources.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
-		</attributes>
-	</classpathentry>
-	<classpathentry path="/Users/yoojeamoon/work/local/gradle-3.0/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-websocket/8.5.4/211d26f536aee3283345aa5b1c479e937401fcd2/tomcat-embed-websocket-8.5.4.jar" kind="lib" sourcepath="/Users/yoojeamoon/work/local/gradle-3.0/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-websocket/8.5.4/b2d4dd915b9560876c5064f2f9a8d25a774ad9e1/tomcat-embed-websocket-8.5.4-sources.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
